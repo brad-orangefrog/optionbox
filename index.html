@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Materialize: OptionBox Plugin</title>
+<link rel="stylesheet" href="materialize.min.css">
+<link rel="stylesheet" href="optionbox.css">
+<script src="materialize.min.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="optionbox.dev.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Oxygen:300,400,700|Material+Icons');
+header { text-align: center; width: 100%; padding: 20px; border: solid 1px #ccc; background: #f5f5f5 }
+article { width: 80%; margin: 0 auto }
+hr { border: none; color: #f0f0f0; background: #f0f0f0; height: 2px; margin: 0; padding: 0 }
+</style>
+<script>
+
+$( document ).ready(function() {
+	$(".optionbox").OptionBox({
+		width: 'auto'
+	});
+});
+</script>
+</head>
+<body>
+
+<header>
+	<div id="target">
+		<a class="btn optionbox-trigger" data-box="dialog-email"><i class="material-icons">email</i></a>
+		<a class="btn optionbox-trigger" data-box="dialog-notifications"><i class="material-icons">notifications</i></a>
+		<a class="btn optionbox-trigger" data-box="dialog-friends"><i class="material-icons">people</i></a>
+		<a class="btn optionbox-trigger" data-box="dialog-settings"><i class="material-icons">settings</i></a>
+	</div>
+</header>
+
+<article>
+	<h1>Materialize: OptionBox Plugin</h1>
+	<p>This plugin is an attempt to create an insanely light-weight user interface control that is not quite as intrusive as a modal state dialog, but allows more than just navigation functionality offered by most drop-down components. This plugin uses the Materialize user interface library.</p>
+	<ul>
+		<li><a href="https://materializecss.com/" target="_blank">Visit the Materialize homepage</a></li>
+		<li><a href="https://github.com/Dogfalo/materialize/releases/download/1.0.0-beta/materialize-src-v1.0.0-beta.zip" target="_blank">Download Materialize source</a></li>
+	</ul>
+	<p>Specifically, the <i class="material-icons">people</i> option box on this page contains an input element. You'll notice setting focus to the element does not hide the control. OptionBox allows fully interactive content inside its container.</p>
+	<h2>Future Improvements</h2>
+	<p>Right now the control only detects horizontal document collision. It would be ideal to have vertical collision as well where the OptionBox could be positioned above or to the side of trigger elements.</p>
+	<p>It would be great to able to add classes to OptionBox child elements that would trigger the box to close.</p>
+</article>
+
+<div id="dialog-email" class="optionbox">
+	<div class="optionbox-padding">
+		<ul>
+			<li><a href="#">Send Message</a></li>
+		</ul>
+		<p>You can search for things here:</p>
+		<hr />
+		<p>You can search for things here:</p>
+		<hr />
+		<p>You can search for things here:</p>
+	</div>
+</div>
+
+<div id="dialog-notifications" class="optionbox">
+	<div class="optionbox-padding">
+		<p>A system update has been pushed today. You can now enjoy a plethora of new features!</p>
+		<hr />
+		<p>You can search for things here:</p>
+		<hr />
+		<p>You can search for things here:</p>
+	</div>
+</div>
+
+<div id="dialog-friends" class="optionbox">
+	<div class="optionbox-padding">
+		<ul>
+			<li><a href="#">Send Message</a></li>
+			<li><a href="#">Manage Friends</a></li>
+		</ul>
+		<input type="text" placeholder="Search for a friend" />
+	</div>
+</div>
+
+<div id="dialog-settings" class="optionbox">
+	<div class="optionbox-padding">
+		<ul>
+			<li><a href="#">Profile</a></li>
+			<li><a href="#">Settings</a></li>
+			<li><a href="#">Sign Out</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

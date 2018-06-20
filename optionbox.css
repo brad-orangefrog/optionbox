@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+.optionbox {
+	position: absolute;
+	background: #fff;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	box-sizing: border-box;
+	display: none;
+}
+
+.optionbox-padding {
+	padding: 10px;
+}
+
+.optionbox ul { padding:  0; margin: 0 }
+.optionbox a { display: block; padding: 5px }
+.arrow-clip {
+	position: absolute;
+	top: -8px;
+	left: 50%;
+	margin-left: -10px;
+	width: 22px;
+	height: 8px;
+	overflow: hidden;
+}
+.arrow {
+	width: 10px;
+	height: 10px;
+	margin: 3px 0 0 5px;
+	background: white;
+	transform: rotate(45deg);
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
